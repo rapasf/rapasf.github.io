@@ -94,8 +94,7 @@
         }
     </style>
 	<br><br>
-	<a href="main2025.html" class="back-button">← Back</a>
-</head>
+<a href="index.html" class="back-button">← Back</a></head>
 <body>
 
     <h1>Videotest</h1>
@@ -104,8 +103,8 @@
     <div id="videoTitle"></div>
 
     <!-- Video will be embedded here -->
-    <div class="video-container" id="videoContainer" style="display: none;">
-        <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+    <div id="videoContainer" style="display:none;">
+        <video id="videoPlayer" controls width="640" src=""></video>
     </div>
 
     <!-- Button to show the solution -->
@@ -122,74 +121,66 @@
     </div>
 
     <!-- JavaScript to read txt file and handle interactions -->
-    <script>
-        let allLinks = [];
-        let currentVideo = null;
+ <script>
+let allLinks = [
+    // A1–A35
+    ...Array.from({length: 35}, (_, i) => `A${i+1}`),
+    // B1–B20
+    ...Array.from({length: 20}, (_, i) => `B${i+1}`),
+    // C1–C15
+    ...Array.from({length: 15}, (_, i) => `C${i+1}`),
+    // D1–D10
+    ...Array.from({length: 10}, (_, i) => `D${i+1}`),
+    // E1–E15
+    ...Array.from({length: 15}, (_, i) => `E${i+1}`),
+    // F1–F4
+    ...Array.from({length: 4}, (_, i) => `F${i+1}`),
+    // G1–G10
+    ...Array.from({length: 10}, (_, i) => `G${i+1}`)
+].map(id => ({ label: id })); // Convert to { label: "A1" } objects
 
-        function loadTextFile() {
-            const url = 'all_link.txt'; // Path to your txt file
 
-            fetch(url)
-                .then(response => response.text())
-                .then(data => {
-                    const lines = data.split('\n');
-                    lines.forEach(line => {
-                        if (line.trim()) {
-                            // Remove UTF-8 BOM if present, split on ANY whitespace
-                            const parts = line.replace(/\uFEFF/g, '').trim().split(/\s+/);
+let currentVideo = null;
 
-                            if (parts.length >= 2) {
-                                const label = parts[0];
-                                const link = parts[1];
-                                allLinks.push({ label, link });
-                            }
+function normalizeTitle(title) {
+    const prefix = title[0];
+    const num = parseInt(title.slice(1),10);
+    return prefix + num.toString().padStart(2,'0');
+}
 
-                        }
-                    });
-                })
-                .catch(error => console.error('Error reading file:', error));
-        }
+function loadRandomVideo() {
+    if (allLinks.length === 0) {
+        alert("No video data available.");
+        return;
+    }
 
-        function loadRandomVideo() {
-            if (allLinks.length === 0) {
-                alert("No video data available.");
-                return;
-            }
+    const randomIndex = Math.floor(Math.random() * allLinks.length);
+    currentVideo = allLinks[randomIndex];
 
-            const randomIndex = Math.floor(Math.random() * allLinks.length);
-            currentVideo = allLinks[randomIndex];
+    const videoLabel = currentVideo.label;
+    const videoPath = `clips/${normalizeTitle(videoLabel)}.mp4`;
 
-            const videoTitle = currentVideo.label;
-            const videoUrl = currentVideo.link;
+    const videoElem = document.querySelector("video");
+    videoElem.src = videoPath;
+    videoElem.load();
 
-            document.getElementById("videoFrame").src = videoUrl;
-            document.getElementById("videoTitle").innerText = `Now Playing: ${videoTitle}`;
-            document.getElementById("videoContainer").style.display = "block";
-        }
+    document.getElementById("videoTitle").innerText = `Now Playing: ${videoLabel}`;
+    document.getElementById("videoContainer").style.display = "block";
+}
 
-        function openModal() {
-            if (currentVideo) {
-                const imageUrl = `decisions/${currentVideo.label}.png`; // Assuming the image file names are the same as the labels
-                document.getElementById("solutionImage").src = imageUrl;
-                document.getElementById("imageModal").style.display = "block";
-            } else {
-                alert("No video selected.");
-            }
-        }
+function openModal() {
+    if (currentVideo) {
+        document.getElementById("solutionImage").src = `decisions/${currentVideo.label}.png`;
+        document.getElementById("imageModal").style.display = "block";
+    } else {
+        alert("No video selected.");
+    }
+}
 
-        function closeModal() {
-            document.getElementById("imageModal").style.display = "none";
-        }
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+</script>
 
-        window.onload = loadTextFile;
-
-        // Close the modal if the user clicks outside the modal content
-        window.onclick = function (event) {
-            const modal = document.getElementById("imageModal");
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        };
-    </script>
 </body>
 </html>

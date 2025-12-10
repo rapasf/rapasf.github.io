@@ -74,7 +74,7 @@ HTML_TEMPLATE_TAIL = """
 </html>
 """
 
-def generate_block(index: int, cat = 'C') -> str:
+def generate_block(index: int, cat = 'G') -> str:
     """
     Creates the video + button + modal HTML block for index 1..35.
     """
@@ -110,7 +110,7 @@ def generate_block(index: int, cat = 'C') -> str:
 """
     return block
 
-def make_html(start=1, end=20, out_file="videos.html"):
+def make_html(start=1, end=10, out_file="videos.html"):
     html = [HTML_TEMPLATE_HEAD]
     for i in range(start, end + 1):
         html.append(generate_block(i))
