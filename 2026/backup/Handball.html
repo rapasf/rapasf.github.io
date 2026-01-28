@@ -3,20 +3,158 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Penalty area incidents</title>
-    	<br><br>
-	<a href="main2025.html" class="back-button">← Back</a>
-  </head>
-     <link rel="stylesheet" href="style.css">
+    <title>Handball</title>
+    <style>
+      /* Basic styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      h2 {
+        color: #000000;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2rem;
+      }
+
+      /* Video embed container */
+      .video-container {
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        max-width: 80%; /* Set the maximum width to 80% of the page width */
+        margin: 0 auto; /* Center the video on the page */
+        background: #000;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding-bottom: 33%; /* 56.25%16:9 aspect ratio */
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+      }
+
+      /* Button styling */
+      .button-container {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 18px;
+        background-color: #000000;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 123, 255, 0.4);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #000000;
+        box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+      }
+
+      /* Modal (banner) styling */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.8
+        ); /* Black background with opacity */
+      }
+
+      .modal-content {
+        position: relative;
+        margin: 1% auto;
+        padding: 1px;
+        width: 80%;
+        max-width: 700px;
+        background-color: black;
+        border-radius: 1px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .modal-content img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+      }
+
+      .close-btn:hover {
+        color: red;
+      }
+
+      /* Footer styling */
+      footer {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #555;
+      }
+		/* Style for the button */
+        .back-button {
+            position: absolute; /* or use fixed for always visible */
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            background-color: #f4f4f4; /* Change design */
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+	<br><br>
+	<a href="main2026.html" class="back-button">← Back</a>
+</head>
       <body>
-	    <h1>Penalty area incidents</h1>
+	    <h1>Handball</h1>
         <!-- wp:heading -->
-        <h2>E1</h2>
+        <h2>C1</h2>
         <!-- /wp:heading -->
 
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/m_ZLyUE1BjU"
+            src="https://www.youtube.com/embed/wA3EvlFo8f0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -34,18 +172,18 @@
             <span class="close-btn" onclick="closeModal('imageModal1')"
               >&times;</span
             >
-            <img src="decisions\E1.png" alt="E1 Solution" />
+            <img src="decisions\C1.png" alt="C1 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E2</h2>
+        <h2>C2</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/UlkxnEIDJY4","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/roZno7sQ0NI"
+            src="https://www.youtube.com/embed/HoWW94wz944"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -61,18 +199,18 @@
             <span class="close-btn" onclick="closeModal('imageModal2')"
               >&times;</span
             >
-            <img src="decisions\E2.png" alt="E2 Solution" />
+            <img src="decisions\C2.png" alt="C2 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E3</h2>
+        <h2>C3</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/thPZWcxLMYs","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/GLIT3v4M5AA"
+            src="https://www.youtube.com/embed/5ItvDEt_KP0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -88,18 +226,18 @@
             <span class="close-btn" onclick="closeModal('imageModal3')"
               >&times;</span
             >
-            <img src="decisions\E3.png" alt="E3 Solution" />
+            <img src="decisions\C3.png" alt="C3 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E4</h2>
+        <h2>C4</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/mx477i3miEo","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/KxrcYSh4zkk"
+            src="https://www.youtube.com/embed/8JlFScYmTPQ"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -115,18 +253,18 @@
             <span class="close-btn" onclick="closeModal('imageModal4')"
               >&times;</span
             >
-            <img src="decisions\E4.png" alt="E4 Solution" />
+            <img src="decisions\C4.png" alt="C4 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E5</h2>
+        <h2>C5</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/zaVxvsODCe8","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/6kLeJiqRknQ"
+            src="https://www.youtube.com/embed/e72_xIQLeyo"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -142,18 +280,18 @@
             <span class="close-btn" onclick="closeModal('imageModal5')"
               >&times;</span
             >
-            <img src="decisions\E5.png" alt="E5 Solution" />
+            <img src="decisions\C5.png" alt="C5 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E6</h2>
+        <h2>C6</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/Yl58nFzTT8g","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/JgYxnTVtfWk"
+            src="https://www.youtube.com/embed/p3b_p-K2Y2I"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -169,18 +307,18 @@
             <span class="close-btn" onclick="closeModal('imageModal6')"
               >&times;</span
             >
-            <img src="decisions\E6.png" alt="E6 Solution" />
+            <img src="decisions\C6.png" alt="C6 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E7</h2>
+        <h2>C7</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/v8xPF8atqj8","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/ZvTM5RGbcOY"
+            src="https://www.youtube.com/embed/haSKNGSDwAc"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -196,18 +334,18 @@
             <span class="close-btn" onclick="closeModal('imageModal7')"
               >&times;</span
             >
-            <img src="decisions\E7.png" alt="E7 Solution" />
+            <img src="decisions\C7.png" alt="C7 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E8</h2>
+        <h2>C8</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/kgxVFzoqp-g","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/xEzEtUqAphQ"
+            src="https://www.youtube.com/embed/J86AaWgiDyY"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -223,18 +361,18 @@
             <span class="close-btn" onclick="closeModal('imageModal8')"
               >&times;</span
             >
-            <img src="decisions\E8.png" alt="E8 Solution" />
+            <img src="decisions\C8.png" alt="C8 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E9</h2>
+        <h2>C9</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/e0WHfeSQNn0","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/xajrH4KOw2s"
+            src="https://www.youtube.com/embed/5qhpMsDnlcQ"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -250,18 +388,18 @@
             <span class="close-btn" onclick="closeModal('imageModal9')"
               >&times;</span
             >
-            <img src="decisions\E9.png" alt="E9 Solution" />
+            <img src="decisions\C9.png" alt="C9 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E10</h2>
+        <h2>C10</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/iPWWDJK1Mrc","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/qYyaOO53O_s"
+            src="https://www.youtube.com/embed/EynS3DrxbPI"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -277,18 +415,18 @@
             <span class="close-btn" onclick="closeModal('imageModal10')"
               >&times;</span
             >
-            <img src="decisions\E10.png" alt="E10 Solution" />
+            <img src="decisions\C10.png" alt="C10 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E11</h2>
+        <h2>C11</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/xVzneknb6tg","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/sqT0VAJqstw"
+            src="https://www.youtube.com/embed/hJSwBydpC1I"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -304,18 +442,18 @@
             <span class="close-btn" onclick="closeModal('imageModal11')"
               >&times;</span
             >
-            <img src="decisions\E11.png" alt="E11 Solution" />
+            <img src="decisions\C11.png" alt="C11 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E12</h2>
+        <h2>C12</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/e8Z8jJhUUdc","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/P7fcmMep2ec"
+            src="https://www.youtube.com/embed/UeA-5c5mSPA"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -331,18 +469,18 @@
             <span class="close-btn" onclick="closeModal('imageModal12')"
               >&times;</span
             >
-            <img src="decisions\E12.png" alt="E12 Solution" />
+            <img src="decisions\C12.png" alt="C12 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E13</h2>
+        <h2>C13</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/DAAJh_90DRE","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/fFpjqIAdmik"
+            src="https://www.youtube.com/embed/S32ILQ02s8Q"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -358,18 +496,18 @@
             <span class="close-btn" onclick="closeModal('imageModal13')"
               >&times;</span
             >
-            <img src="decisions\E13.png" alt="E13 Solution" />
+            <img src="decisions\C13.png" alt="C13 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E14</h2>
+        <h2>C14</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/TZogjiqy5oI","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/CW0BgZCGiwg"
+            src="https://www.youtube.com/embed/_M1_ptM0EWg"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -385,18 +523,18 @@
             <span class="close-btn" onclick="closeModal('imageModal14')"
               >&times;</span
             >
-            <img src="decisions\E14.png" alt="E14 Solution" />
+            <img src="decisions\C14.png" alt="C14 Solution" />
           </div>
         </div>
 
         <!-- wp:heading -->
-        <h2>E15</h2>
+        <h2>C15</h2>
         <!-- /wp:heading -->
 
         <!-- wp:embed {"url":""https://youtube.com/embed/kzfJb4c_xBQ","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/tk9dqgVfGfc"
+            src="https://www.youtube.com/embed/u2_6PF5M1tQ"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -412,14 +550,13 @@
             <span class="close-btn" onclick="closeModal('imageModal15')"
               >&times;</span
             >
-            <img src="decisions\E15.png" alt="E15 Solution" />
+            <img src="decisions\C15.png" alt="C15 Solution" />
           </div>
         </div>
-
-        
-
+     
         <!-- Footer -->
         <footer>
+          <p>© 2024 F1 Page</p>
         </footer>
 
         <script>
